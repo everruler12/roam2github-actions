@@ -5,7 +5,8 @@ on:
     branches:
       - main
   schedule:
-      - cron: "0 * * * *" # Here you can change how often your backup runs. https://crontab.guru/examples.html
+      # Here you can change how often your backup runs. See https://crontab.guru/examples.html
+      - cron: "0 * * * *"
 
 jobs:
   backup:
