@@ -26,14 +26,14 @@ jobs:
       - name: Run Backup
         run: |
           cd /tmp
-          git clone -q https://github.com/everruler12/roam2github.git roam2github
+          git clone -q https://github.com/everruler12/roam2github-test.git roam2github
           cd $_
           npm i
           npm run start -s
         env:
-          R2G_EMAIL: ${{ secrets.ROAM_EMAIL }}
-          R2G_PASSWORD: ${{ secrets.ROAM_PASSWORD }}
-          R2G_GRAPH: ${{ secrets.ROAM_GRAPH }}
+          ROAM_EMAIL: ${{ secrets.ROAM_EMAIL }}
+          ROAM_PASSWORD: ${{ secrets.ROAM_PASSWORD }}
+          ROAM_GRAPH: ${{ secrets.ROAM_GRAPH }}
           BACKUP_EDN: true
           BACKUP_JSON: true
           BACKUP_MARKDOWN: true
