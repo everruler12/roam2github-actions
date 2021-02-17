@@ -1,4 +1,4 @@
-name: "Roam Research Backup"
+name: "Roam Research backup"
 
 on:
   push:
