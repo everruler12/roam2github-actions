@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          repository: everruler12/roam-backup-test
+          repository: ${{ secrets.BACKUP_REPO }}
           token: ${{ secrets.ACCESS_TOKEN }}
       
       - name: Setup Node
@@ -31,11 +31,11 @@ jobs:
           npm i
           npm run start -s
         env:
-          R2G_EMAIL: ${{ secrets.R2G_EMAIL }}
-          R2G_PASSWORD: ${{ secrets.R2G_PASSWORD }}
-          R2G_GRAPH: ${{ secrets.R2G_GRAPH }}
+          R2G_EMAIL: ${{ secrets.ROAM_EMAIL }}
+          R2G_PASSWORD: ${{ secrets.ROAM_PASSWORD }}
+          R2G_GRAPH: ${{ secrets.ROAM_GRAPH }}
 
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Automated snapshot
+          commit_message: Automatic backup
