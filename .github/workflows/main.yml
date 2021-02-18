@@ -40,6 +40,6 @@ jobs:
           BACKUP_MARKDOWN: true
 
       - name: Commit Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: everruler12/git-auto-commit-action@v4
         with:
           commit_message: Automatic backup
